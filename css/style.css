@@ -94,6 +94,8 @@ section.about .empty{
     flex-basis: 37.5vw;
     background: #9c9191;
     border-radius: var(--border-radius); /*how much the corder of the box should be rounded off*/
+    min-width: 20%;
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
 }
 
 section.about article {
@@ -109,12 +111,13 @@ section.about article {
 }
 
 section.about article .title {
-    flex: 2;
+    flex: 1;
     display: flex;
     align-items: flex-end;
     background: #1c47ff;
     border-radius: var(--border-radius);
     padding: var(--gutter);
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
 }
 
 section.about article .description {
@@ -142,6 +145,9 @@ section.service figure {
     margin: 0;
     background: rgb(197, 247, 133);
     border-radius: var(--border-radius);
+    max-width: 68.2%;
+    min-width: 20%;
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
 }
 
 section.service figure img {
@@ -156,6 +162,7 @@ section.service .text {
     background: #1f1a1c;
     padding: 3.125vw;
     border-radius: var(--border-radius);
+    
 }
 
 section.service .text a {
