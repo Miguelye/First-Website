@@ -1,0 +1,17 @@
+section.contact {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(yellow 50%, blue, red 85%);
+    border-radius: var(--border-radius);
+
+    a {
+        font-size: 100px;
+        color:black;
+        font-weight: bold;
+        transition: color 2s;
+    }
+
+    a:hover {
+        color: white
+    }
+}

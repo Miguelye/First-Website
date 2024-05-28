@@ -4,11 +4,11 @@
 <html lang="en">
     <head>
         <title>My Portafolio</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/index.2e8c441c.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <nav> <!-- the <nav> tag defines a set of navigation links for the website-->
@@ -40,7 +40,7 @@
         <section id="code" class="service service-code sticky">
             <article>
                 <figure>
-                    <img src="Images/octagon.png" width="200"/>
+                    <img src="/octagon.87da83ec.png" width="200">
                 </figure>
 
                 <div class="text">
@@ -57,7 +57,7 @@
         <section id="art" class="service service-art sticky">
             <article>
                 <figure>
-                    <img src="Images/triangle.png" width="200"/>
+                    <img src="/triangle.c402a19e.png" width="200">
                 </figure>
 
                 <div class="text">
@@ -74,7 +74,7 @@
         <section id="gameDev" class="service service-gameDev sticky">
             <article>
                 <figure> <!--Contains media or illustrations with a optional caption provided by '<figcaption>'-->
-                    <img src="Images/diamond.png" width="200"/>
+                    <img src="/diamond.3fbcac88.png" width="200">
                 </figure>
 
                 <div class="text">
@@ -92,24 +92,18 @@
             <a href="mailto:Miki@mail.com">Miki@mail.com</a>
         </section>
 
-        <script>
-            let emptyElement = document.querySelector('.about .empty');
-            let titleElement = document.querySelector('.about .description');
+        <script>let emptyElement = document.querySelector(".about .empty");
+let titleElement = document.querySelector(".about .description");
+let figureElements = document.querySelectorAll(".service figure");
+window.addEventListener("mousemove", handleMouseMove);
+function handleMouseMove(event) {
+    emptyElement.style.flexBasis = event.clientX + "px";
+    titleElement.style.flexBasis = event.clientY / 2 + "px";
+    figureElements.forEach(function(element) {
+        element.style.flexBasis = window.innerWidth - event.clientX + "px";
+    });
+}
 
-            let figureElements = document.querySelectorAll('.service figure')
-
-            window.addEventListener( 'mousemove', handleMouseMove);
-
-            function handleMouseMove( event ) {
-
-                emptyElement.style.flexBasis = event.clientX + 'px';
-                titleElement.style.flexBasis = (event.clientY / 2) + 'px';
-
-                figureElements.forEach ( function( element ) 
-                {
-                    element.style.flexBasis = (window.innerWidth - event.clientX) + 'px';
-                })
-                }
-        </script>
-    </body>
+</script>
+    <script src="/First-Website.59712999.js"></script></body>
 </html>

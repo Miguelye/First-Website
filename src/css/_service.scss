@@ -1,0 +1,85 @@
+section.service article {
+    display: flex;
+    width: 100%;
+}
+
+section.service figure {
+    display: flex;
+    align-items: center; /*aligns flex items along the cross axis*/
+    justify-content: center; /*aligns flex items along the main axis*/
+    flex-basis: 56.25vw;
+    margin: 0;
+    background: rgb(197, 247, 133);
+    border-radius: var(--border-radius);
+    max-width: 68.2%;
+    min-width: 20%;
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+
+    img {
+        width:40%;
+    }
+}
+
+section.service .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background: #1f1a1c;
+    padding: 3.125vw;
+    border-radius: var(--border-radius);
+
+    a {
+        font-family: "Space Mono", monospace;
+    }
+    
+}
+
+/* service section animations */
+
+section.service.service-code figure img {
+    animation-name: sineMotion;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes sineMotion {
+    0% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+/* service section overrides */
+
+section.service.service-code figure {
+    background-color: rgb(12, 208, 208);
+}
+
+section.service.service-code .text h2,
+section.service.service-code .text a {
+    color: rgb(225, 253, 124);
+}
+
+section.service.service-art figure {
+    background-color: rgb(12, 61, 208);
+}
+
+section.service.service-art .text h2,
+section.service.service-art .text a {
+    color: rgb(0, 200, 255);
+}
+
+section.service.service-gameDev figure {
+    background-color: rgb(208, 12, 55);
+}
+
+section.service.service-gameDev .text h2,
+section.service.service-gameDev .text a {
+    color: rgb(0, 115, 255);
+}

@@ -1,0 +1,45 @@
+/*About Section*/
+
+section.about {
+    z-index: 2;
+
+    .empty{ 
+        flex-basis: 37.5vw;
+        background: #9c9191;
+        border-radius: var(--border-radius); /*how much the corder of the box should be rounded off*/
+        min-width: 20%;
+        transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+    }
+
+    article {
+        flex: 1;
+        /*
+        Equivalent to:
+        flex-grow: 1; determines how much a flex item should grow, = 1 means the flex can grow to occupy all space along the main axis
+        flex-shrink: 1; same but for shrink
+        flex-bases: 0%; specifies the inital size of a flex item before any available space distributed, =0 mean no space taken
+        */
+        display: flex; /* defines a flex container*/
+        flex-direction: column;
+
+        .title {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            background: #1c47ff;
+            border-radius: var(--border-radius);
+            padding: var(--gutter);
+            transition: flex-basis 1s cubic-bezier(0,.9,.4,.99);
+        }
+
+        .description {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: #d6a3fb;
+            border-radius: var(--border-radius);
+            padding: var(--gutter);
+            color: black;
+        }
+    }
+}
